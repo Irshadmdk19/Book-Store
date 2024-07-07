@@ -1,10 +1,10 @@
 import express, { response } from "express";
-import { PORT, MONGODB_URL } from "./config.js";
+import { MONGODB_URL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 import bookRoute from "./routes/bookRoute.js"
 import cors from 'cors';
-
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json()); //Middleware for parsing request body
