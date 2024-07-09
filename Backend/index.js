@@ -1,5 +1,5 @@
 import express, { response } from "express";
-import { MONGODB_URL } from "./config.js";
+// import { MONGODB_URL } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 import bookRoute from "./routes/bookRoute.js"
