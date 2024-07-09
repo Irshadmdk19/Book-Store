@@ -4,7 +4,10 @@ import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 import bookRoute from "./routes/bookRoute.js"
 import cors from 'cors';
+import 'dotenv/config';
+
 const PORT = process.env.PORT || 4000;
+const MONGODB_URL = process.env.MONGODB_URL;
 const app = express();
 
 app.use(express.json()); //Middleware for parsing request body
