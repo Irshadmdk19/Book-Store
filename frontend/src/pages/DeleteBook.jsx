@@ -8,11 +8,12 @@ const DeleteBook = () => {
   const [loading, setloading] = useState(false)
   const navigate=useNavigate();
   const {id}=useParams();
-
+  
+  const myApi= process.env.BACKEND_SERVICE_URL;
   const handleDeleteBook=()=>{
     setloading(true);
     axios
-    .delete(`http://localhost:4000/book/${id}`)
+    .delete(`${myApi}/book/${id}`)
     .then(()=>{
       setloading(false);
       navigate('/');

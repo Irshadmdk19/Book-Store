@@ -13,7 +13,8 @@ const CreateBook = () => {
 
   const {enqueueSnackbar}= useSnackbar();
   const navigate = useNavigate();
-
+  
+  const myApi= process.env.BACKEND_SERVICE_URL;
   const handleSaveBook = () => {
     const data = {
       title,
@@ -22,7 +23,7 @@ const CreateBook = () => {
     };
     setloading(true);
     axios
-      .post("http://localhost:4000/book", data)
+      .post(`${myApi}/book`, data)
       .then(() => {
         setloading(false);
         enqueueSnackbar('Book Created Successfully', {variant: 'success'})

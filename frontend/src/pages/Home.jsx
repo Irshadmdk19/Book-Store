@@ -12,10 +12,12 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setloading] = useState(false);
   const [showType, setshowType] = useState("table");
+
+  const myApi= process.env.BACKEND_SERVICE_URL;
   useEffect(() => {
     setloading(true);
     axios
-      .get("http://localhost:4000/book")
+      .get(`${myApi}/book`)    //http://localhost:4000/book
       .then((res) => {
         setBooks(res.data.data);
         console.log("Response from server:", res.data);

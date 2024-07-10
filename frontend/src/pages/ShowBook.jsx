@@ -8,10 +8,10 @@ const ShowBook = () => {
   const [book, setbook] = useState([])
   const [loading, setloading] = useState(false);
   const {id}=useParams();
-
+  const myApi= process.env.BACKEND_SERVICE_URL;
   useEffect(() => {
     setloading(true);
-    axios.get(`http://localhost:4000/book/${id}`)
+    axios.get(`${myApi}/book/${id}`)
     .then((res)=>{
       setbook(res.data);
       setloading(false)
