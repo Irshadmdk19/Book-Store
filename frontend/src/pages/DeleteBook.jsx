@@ -3,6 +3,7 @@ import Spinner from '../Components/Spinner'
 import BackButton from '../Components/BackButton'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
+import 'dotenv/config';
 
 const DeleteBook = () => {
   const [loading, setloading] = useState(false)

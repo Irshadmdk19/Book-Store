@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Spinner from '../Components/Spinner'
 import BackButton from '../Components/BackButton'
 import { useParams } from 'react-router-dom'
-
+import 'dotenv/config';
 const ShowBook = () => {
   const [book, setbook] = useState([])
   const [loading, setloading] = useState(false);

@@ -7,6 +7,7 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import Bookstable from "../Components/Bookstable";
 import BooksCard from "../Components/BooksCard";
+import 'dotenv/config';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
