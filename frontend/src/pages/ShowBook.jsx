@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react'
 import Spinner from '../Components/Spinner'
 import BackButton from '../Components/BackButton'
 import { useParams } from 'react-router-dom'
-import 'dotenv/config';
+
 const ShowBook = () => {
   const [book, setbook] = useState([])
   const [loading, setloading] = useState(false);
   const {id}=useParams();
-  const myApi= process.env.BACKEND_SERVICE_URL;
+  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;;
   useEffect(() => {
     setloading(true);
     axios.get(`${myApi}/book/${id}`)

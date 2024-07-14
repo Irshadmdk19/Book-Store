@@ -7,14 +7,14 @@ import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import Bookstable from "../Components/Bookstable";
 import BooksCard from "../Components/BooksCard";
-import 'dotenv/config';
+
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setloading] = useState(false);
   const [showType, setshowType] = useState("table");
 
-  const myApi= process.env.BACKEND_SERVICE_URL;
+  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;;
   useEffect(() => {
     setloading(true);
     axios

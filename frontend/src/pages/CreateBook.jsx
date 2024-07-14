@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import BackButton from "../Components/BackButton";
 import {useSnackbar} from 'notistack'
 
+
 const CreateBook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -14,7 +15,7 @@ const CreateBook = () => {
   const {enqueueSnackbar}= useSnackbar();
   const navigate = useNavigate();
   
-  const myApi= process.env.BACKEND_SERVICE_URL;
+  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;
   const handleSaveBook = () => {
     const data = {
       title,

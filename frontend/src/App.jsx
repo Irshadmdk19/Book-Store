@@ -5,7 +5,7 @@ import EditBook from './pages/EditBook';
 import Home from './pages/Home';
 import ShowBook from './pages/ShowBook';
 import DeleteBook from './pages/DeleteBook';
-import 'dotenv/config';
+
 
 
 const App = () => {
