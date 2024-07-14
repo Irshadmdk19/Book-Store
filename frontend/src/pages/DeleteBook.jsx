@@ -10,7 +10,7 @@ const DeleteBook = () => {
   const navigate=useNavigate();
   const {id}=useParams();
   
-  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;;
+  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;
   const handleDeleteBook=()=>{
     setloading(true);
     axios

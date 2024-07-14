@@ -14,7 +14,7 @@ const Home = () => {
   const [loading, setloading] = useState(false);
   const [showType, setshowType] = useState("table");
 
-  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;;
+  const myApi= import.meta.env.VITE_BACKEND_SERVICE_URL;
   useEffect(() => {
     setloading(true);
     axios
